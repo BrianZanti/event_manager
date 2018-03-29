@@ -32,8 +32,7 @@ class EventManagerTest < Minitest::Test
 
   def test_load
     em = EventManager.new(["Brian Zanti", "Manoj Panta", "Tyler Westlie", "Bryan Combs"])
-    FileIO.stubs(:load).returns(["Jude Dutton", "Connor Barwin", "Ray Lewis"])
     em.load("./data/full_event_attendees.csv")
-    assert_equal 7, em.attendees.length
+    assert_equal 5179, em.attendees.length
   end
 end
